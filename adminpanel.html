@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Admin Panel 👑</h1>
+
+<button onclick="loadUsers()">Show Users</button>
+
+<ul id="users"></ul>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB6eRzkkPGGe6Km_e8OC6SoNI9vYE1KeuY",
+  authDomain: "plassher-b7ad4.firebaseapp.com",
+  projectId: "plassher-b7ad4"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+function loadUsers(){
+  db.collection("users").get().then((querySnapshot) => {
+    var list = document.getElementById("users");
+    list.innerHTML = "";
+
+    querySnapshot.forEach((doc) => {
+      var user = doc.data();
+
+      var li = document.createElement("li");
+      li.textContent = user.name + " " + user.lastname + " | " + user.class + " | " + user.email;
+
+      list.appendChild(li);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
