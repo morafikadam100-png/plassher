@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Platform</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #5aa9c4, #7bb6c9);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-top: 30px;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.card {
+    background: #FFD700;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Financial Sciences</h1>
+
+<div class="container">
+
+<div class="card" onclick="go('public_finance')">
+<h2>Public Finance</h2>
+<p>Government revenue & spending</p>
+</div>
+
+<div class="card" onclick="go('tax')">
+<h2>Tax Law</h2>
+<p>Tax systems and legislation</p>
+</div>
+
+<div class="card" onclick="go('budget')">
+<h2>Public Budgeting</h2>
+<p>Budget planning & control</p>
+</div>
+
+<div class="card" onclick="go('accounting')">
+<h2>Public Sector Accounting</h2>
+<p>Accounting in public institutions</p>
+</div>
+
+<div class="card" onclick="go('audit')">
+<h2>Financial Governance and Audit</h2>
+<p>Audit & financial control systems</p>
+</div>
+
+</div>
+
+<script>
+function go(section) {
+
+    if(section === 'public_finance'){
+        window.location.href = "public_finance.html";
+    }
+    else if(section === 'tax'){
+        window.location.href = "tax.html";
+    }
+    else if(section === 'budget'){
+        window.location.href = "budget.html";
+    }
+    else if(section === 'accounting'){
+        window.location.href = "accounting.html";
+    }
+    else if(section === 'audit'){
+        window.location.href = "audit.html";
+    }
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrative Platform</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #5aa9c4, #7bb6c9);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-top: 30px;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.card {
+    background: #d9f06b;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Administrative Sciences</h1>
+
+<div class="container">
+
+<div class="card" onclick="go('law')">
+<h2>Administrative Law Unit</h2>
+<p>Learn administrative legal principles</p>
+</div>
+
+<div class="card" onclick="go('public')">
+<h2>Public Administration</h2>
+<p>Government systems & management</p>
+</div>
+
+<div class="card" onclick="go('activity')">
+<h2>Activity Unit</h2>
+<p>Administrative activities & functions</p>
+</div>
+
+<div class="card" onclick="go('litigation')">
+<h2>Administrative Litigation Unit</h2>
+<p>Disputes and legal procedures</p>
+</div>
+
+<div class="card" onclick="go('courts')">
+<h2>Administrative Courts Unit</h2>
+<p>Structure of administrative courts</p>
+</div>
+
+</div>
+
+<script>
+function go(section) {
+
+    // هنا تقدر تربط كل وحدة بصفحة
+    if(section === 'law'){
+        window.location.href = "law.html";
+    }
+    else if(section === 'public'){
+        window.location.href = "public.html";
+    }
+    else if(section === 'activity'){
+        window.location.href = "activity.html";
+    }
+    else if(section === 'litigation'){
+        window.location.href = "litigation.html";
+    }
+    else if(section === 'courts'){
+        window.location.href = "courts.html";
+    }
+
+}
+</script>
+
+</body>
+</html>
