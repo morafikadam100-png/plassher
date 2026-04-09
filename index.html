@@ -13,11 +13,30 @@
 
 <button onclick="login()">Login</button>
 <p>Don't have account? <a href="register.html">Register</a></p>
+  <button onclick="resetPassword()">Forgot Password?</button>
 <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 
 <script>
+  <script>
+function resetPassword() {
+  var email = document.getElementById("email").value;
+
+  if(email == ""){
+    alert("دخل الإيميل ديالك");
+    return;
+  }
+
+  firebase.auth().sendPasswordResetEmail(email)
+  .then(() => {
+    alert("📧 تم إرسال رابط تغيير كلمة المرور للإيميل ديالك");
+  })
+  .catch((error) => {
+    alert(error.message);
+  });
+}
+</script>
 const firebaseConfig = {
   apiKey: "AIzaSyB6eRzkkPGGe6Km_e8OC6SoNI9vYE1KeuY",
   authDomain: "plassher-b7ad4.firebaseapp.com",
