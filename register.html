@@ -98,18 +98,21 @@
 <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
 <script>
 const firebaseConfig = {
   apiKey: "AIzaSyB6eRzkkPGGe6Km_e8OC6SoNI9vYE1KeuY",
   authDomain: "plassher-b7ad4.firebaseapp.com",
   projectId: "plassher-b7ad4",
-  storageBucket: "plassher-b7ad4.firebasestorage.app",
+  storageBucket: "plassher-b7ad4.appspot.com",
   messagingSenderId: "217915657263",
   appId: "1:217915657263:web:7115fb78191e7d0b2e4ada"
 };
 
 firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
 
 // REGISTER
 function register(){
@@ -118,12 +121,22 @@ function register(){
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
-  if(name === "" || lastname === "" || email === "" || password === ""){
+  if(!name || !lastname || !email || !password){
     alert("عمر جميع الخانات");
     return;
   }
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential)=>{
+
+    // 🔥 تخزين المستخدم فـ database
+    return db.collection("users").add({
+      name: name,
+      lastname: lastname,
+      email: email
+    });
+
+  })
   .then(()=>{
     alert("تم التسجيل بنجاح ✅");
     window.location.href = "index.html";
