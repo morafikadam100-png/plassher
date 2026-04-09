@@ -34,22 +34,18 @@ function login(){
   firebase.auth().signInWithEmailAndPassword(email, password)
 .then(() => {
 
-  window.location.href = "index.html";
+  // 👑 Admin
+  if(email === "adamzghem10@gmail.com" || email === "dchribabdellah@gmail.com"){
+    window.location.href = "adminpanel.html";
+  } else {
+    window.location.href = "index.html";
+  }
 
 })
-
-    // 👑 Admin (انت و صاحبك)
-    if(email === "adamzighem01@gmail.com" || email === "dchrifabdellah@gmail.com"){
-      window.location.href = "adminpanel.html";
-    } else {
-      window.location.href = "index.html";
-    }
-
-  })
-  .catch((error) => {
-    alert(error.message);
-  });
-}
+.catch((error) => {
+  alert(error.message);
+});
+  
 </script>
 
 </body>
