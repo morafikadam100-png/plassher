@@ -32,7 +32,11 @@ function login(){
   var password = document.getElementById("password").value;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(() => {
+.then(() => {
+
+  window.location.href = "index.html";
+
+})
 
     // 👑 Admin (انت و صاحبك)
     if(email === "adamzighem01@gmail.com" || email === "dchrifabdellah@gmail.com"){
