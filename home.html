@@ -23,72 +23,111 @@ body{
   margin:0;
   background:linear-gradient(180deg, var(--main), var(--secondary));
   color:#333;
+  padding-bottom:70px;
 }
 
-/* HEADER */
+/* HERO */
 header{
-  padding:35px 15px 20px;
   text-align:center;
+  padding:50px 20px 30px;
   color:white;
 }
 
 h1{
-  font-size:20px;
-  margin-bottom:8px;
+  font-size:24px;
+  margin-bottom:10px;
 }
 
 .subtitle{
-  font-size:12px;
+  font-size:13px;
   opacity:0.9;
-  line-height:1.5;
-  max-width:260px;
+  max-width:280px;
   margin:auto;
+  line-height:1.6;
 }
 
-/* BUTTON */
+/* WELCOME ICON */
+.welcome{
+  font-size:30px;
+  margin-bottom:10px;
+  animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+  100%{transform:translateY(0);}
+}
+
+/* BUTTONS */
 .cta{
-  margin-top:12px;
+  margin-top:20px;
 }
 
 .cta a{
   display:inline-block;
-  background:white;
-  color:#333;
-  padding:7px 16px;
-  border-radius:18px;
-  font-size:12px;
+  margin:5px;
+  padding:10px 20px;
+  border-radius:25px;
+  font-size:13px;
   text-decoration:none;
+  font-weight:bold;
   transition:0.3s;
 }
 
-.cta a:hover{
+.primary{
+  background:white;
+  color:#333;
+}
+
+.primary:hover{
   background:#222;
   color:white;
 }
 
+.secondary{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+}
+
+.secondary:hover{
+  background:white;
+  color:#333;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  color:white;
+  font-size:14px;
+  margin-top:10px;
+  opacity:0.9;
+}
+
 /* MENU */
 .menu{
-  padding:12px;
+  padding:15px;
 }
 
 /* CARD */
 .card{
   background:white;
-  margin:10px 0;
-  padding:14px;
-  border-radius:12px;
+  margin:12px 0;
+  padding:16px;
+  border-radius:14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  box-shadow:0 5px 12px rgba(0,0,0,0.15);
-  transition:0.25s;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px) scale(1.01);
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .left{
   display:flex;
   align-items:center;
@@ -96,19 +135,19 @@ h1{
 
 /* ICON */
 .icon{
-  font-size:18px;
-  margin-right:10px;
+  font-size:20px;
+  margin-right:12px;
 }
 
 /* TEXT */
 .card h2{
-  font-size:14px;
+  font-size:15px;
   margin:0;
 }
 
 .card p{
-  font-size:11px;
-  margin:2px 0 0;
+  font-size:12px;
+  margin:3px 0 0;
   opacity:0.7;
 }
 
@@ -123,37 +162,29 @@ h1{
 
 /* ARROW */
 .arrow{
-  font-size:14px;
+  font-size:15px;
 }
 
-/* FOOTER */
+/* FOOTER FIXED */
 footer{
-  margin-top:15px;
-  background:#111;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:rgba(0,0,0,0.9);
   color:#aaa;
-  padding:12px 8px;
+  padding:6px;
   text-align:center;
-  font-size:11px;
+  font-size:10px;
+  border-top:1px solid #333;
+}
+
+footer p{
+  margin:2px 0;
 }
 
 footer i{
-  margin:0 4px;
-}
-
-/* ANIMATION */
-.card{
-  animation:fadeUp 0.6s ease;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(10px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  margin:0 3px;
 }
 
 </style>
@@ -164,6 +195,8 @@ footer i{
 
 <header>
 
+<div class="welcome">✨</div>
+
 <h1>PLASSHER Platform</h1>
 
 <div class="subtitle">
@@ -171,10 +204,13 @@ Platform for Legal, Administrative and Social Sciences
 </div>
 
 <div class="cta">
-<a href="#menu">Start Learning</a>
+<a href="#menu" class="primary">Start Learning</a>
+<a href="#menu" class="secondary">Explore</a>
 </div>
 
 </header>
+
+<div class="section-title">Choose your field 👇</div>
 
 <div id="menu" class="menu">
 
