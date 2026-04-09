@@ -3,74 +3,130 @@
 <head>
 
 <meta charset="UTF-8">
-<title>المنصة التعليمية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PLASSHER Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
 <style>
-.card1{
-background:#EFFF6B;
-}
 
-.card2{
-background:#FFD700;
+:root{
+  --main:#4facfe;
+  --secondary:#00f2fe;
+  --dark:#111;
+  --light:#ffffff;
 }
 
 body{
-font-family:Arial;
-margin:0;
-background:#87CEEB;
-text-align:center;
+  font-family:'Cairo', sans-serif;
+  margin:0;
+  background:linear-gradient(to right, var(--main), var(--secondary));
+  text-align:center;
+  color:#333;
 }
 
+/* HEADER */
 header{
-background:#5bbde6;
-padding:30px;
-color:white;
+  padding:60px 20px 40px;
+  color:white;
 }
 
 h1{
-margin:0;
-font-size:32px;
+  margin:0;
+  font-size:34px;
 }
 
 .subtitle{
-max-width:800px;
-margin:15px auto;
-font-size:15px;
-line-height:1.6;
+  max-width:700px;
+  margin:15px auto;
+  font-size:15px;
+  line-height:1.8;
+  opacity:0.9;
 }
 
+/* HERO BUTTON */
+.cta{
+  margin-top:20px;
+}
+
+.cta a{
+  background:white;
+  color:#333;
+  padding:10px 20px;
+  border-radius:25px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.cta a:hover{
+  background:#222;
+  color:white;
+}
+
+/* MENU */
 .menu{
-margin-top:80px;
+  margin-top:40px;
+  padding:20px;
 }
 
+/* CARDS */
 .card{
-background:white;
-width:320px;
-margin:20px auto;
-padding:20px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-cursor:pointer;
-transition:0.3s;
+  background:white;
+  width:320px;
+  margin:20px auto;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
+  transform:translateY(-8px) scale(1.03);
 }
 
-a{
-text-decoration:none;
-color:black;
+.card h2{
+  margin-bottom:10px;
 }
 
-
-body {
-    padding-bottom: 60px;
+.card p{
+  opacity:0.7;
 }
 
+/* COLORS */
+.card1{ background:#EFFF6B; }
+.card2{ background:#FFD700; }
+
+/* FOOTER */
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background:#111;
+  color:#aaa;
+  padding:10px;
+  text-align:center;
+  font-size:12px;
+  border-top:1px solid #444;
+}
+
+footer i{
+  margin:0 5px;
+  cursor:pointer;
+}
+
+footer i:hover{
+  color:white;
+}
+
+body{
+  padding-bottom:70px;
+}
 
 </style>
 
@@ -80,62 +136,46 @@ body {
 
 <header>
 
-<h1>* WELCOME TO PLASSHER Platform *
-</h1>
+<h1>* WELCOME TO PLASSHER Platform *</h1>
 
 <div class="subtitle">
 *Platform for Legal, Administrative and Social Sciences and Higher Education Research*
 </div>
 
+<div class="cta">
+<a href="#menu">Start Learning</a>
+</div>
+
 </header>
 
-<div class="menu">
+<div id="menu" class="menu">
+
 <a href="admin.html">
-<div class="card" style="background:#EFFF6B;">
+<div class="card card1">
 <h2>Pole</h2>
 <p>Adminus</p>
 </div>
 </a>
 
-
-
 <a href="finance.html">
-<div class="card" style="background:#FFD700;">
+<div class="card card2">
 <h2>Pole</h2>
 <p>Financius</p>
 </div>
 </a>
 
+</div>
 
+<footer>
 
+<p>© 2026 - Adam zighem</p>
 
-
-
-<div/>
-
-
-<footer style="
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background:#111;
-color:#aaa;
-padding:8px;
-text-align:center;
-font-size:12px;
-border-top:1px solid #444;
-z-index:1000;
-">
-
-<p style="margin:5px;">© 2026 - Adam zighem </p>
-
-<p style="margin:5px;">
-<i class="fa fa-phone"></i> 0719963082|
+<p>
+<i class="fa fa-phone"></i> 0719963082 |
 <i class="fa fa-envelope"></i> adammorafik1314@protonmail.com
 </p>
 
-<p style="margin:5px;">
+<p>
 <i class="fa-brands fa-facebook"></i>
 <i class="fa-brands fa-whatsapp"></i>
 <i class="fa-brands fa-github"></i>
