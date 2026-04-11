@@ -13,10 +13,11 @@ body{
 
 /* HEADER */
 .header{
-  background:red;
-  padding:15px;
+  background:linear-gradient(45deg,red,darkred);
+  padding:18px;
   text-align:center;
   font-size:22px;
+  font-weight:bold;
 }
 
 /* CONTAINER */
@@ -33,6 +34,11 @@ body{
   border-radius:12px;
   margin-bottom:20px;
   box-shadow:0 0 10px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.02);
 }
 
 /* BUTTON */
@@ -47,12 +53,17 @@ body{
   margin-top:10px;
 }
 
+.btn:hover{
+  background:darkred;
+}
+
 /* PDF */
 iframe{
   width:100%;
-  height:400px;
+  height:420px;
   border:none;
   margin-top:10px;
+  border-radius:10px;
 }
 
 /* VIDEO */
@@ -60,6 +71,7 @@ iframe{
   width:100%;
   height:220px;
   margin-top:10px;
+  border-radius:10px;
 }
 
 /* IMAGE */
@@ -67,6 +79,26 @@ img{
   width:100%;
   border-radius:10px;
   margin-top:10px;
+}
+
+/* NAV BUTTONS */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
+
+.nav a{
+  background:#333;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.nav a:hover{
+  background:red;
 }
 
 </style>
@@ -81,19 +113,25 @@ img{
 
 <div class="container">
 
+<!-- NAVIGATION -->
+<div class="nav">
+<a href="admin.html">⬅️ رجوع</a>
+<a href="index.html">🏠 الرئيسية</a>
+</div>
+
 <!-- PDF SECTION -->
 <div class="card">
 <h3>📘 Lesson PDF</h3>
 
-<a href="courts1.pdf" target="_blank" class="btn">
-📥 Download PDF
+<a href="https://drive.google.com/file/d/1FppqeQTayXM5Q-Z-r6aEcoWTV2-KTvj1/view" target="_blank" class="btn">
+📥 تحميل PDF
 </a>
 
-<iframe src="litigation1.pdf"></iframe>
+<iframe src="https://drive.google.com/file/d/1FppqeQTayXM5Q-Z-r6aEcoWTV2-KTvj1/preview"></iframe>
 
 </div>
 
-<!-- VIDEO SECTION (خليه خاوي دابا) -->
+<!-- VIDEO SECTION -->
 <div class="card">
 <h3>🎥 Video Explanation (Soon)</h3>
 
